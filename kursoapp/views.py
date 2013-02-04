@@ -8,7 +8,7 @@ from models import HomePost
 
 @login_required
 def home(request):
-    posts = HomePost.objects.all()
+    posts = HomePost.objects.filter(activo=True)
     d = {'parametro': "Hola mundo!", "posts": posts}
     return render_to_response('home.html', d, context_instance=RequestContext(request))
 

@@ -3,19 +3,15 @@
 
 {% block head %}
     {% dajaxice_js_import %}
-    <script type="text/javascript">
-        function my_js_callback(data){
-            alert(data.message);
-        }
-    </script>
-
 {% endblock %}
 
 {% block body %}
     <form method="post" action="{% url homepost %}" id="login-form" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="button" onclick="Dajaxice.kursoapp.sayhello(my_js_callback);" value="DAJAXICE">
         <input type="submit" class="submit" value="Save" id="sign-in"/>
+        <input type="text" value="" id="result">
+        <input type="button" onclick="Dajaxice.kursoapp.randomize(Dajax.process);" value="Random!">
     </form>
+
 {% endblock %}

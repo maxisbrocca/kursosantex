@@ -10,8 +10,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" class="submit" value="Save" id="sign-in"/>
-        <input type="text" value="" id="result">
-        <input type="button" onclick="Dajaxice.kursoapp.randomize(Dajax.process);" value="Random!">
     </form>
-
+    <input type="text" value="0" id="result">
+    <input type="button" onclick="Dajaxice.kursoapp.randomize(Dajax.process)" value="Random!">
 {% endblock %}

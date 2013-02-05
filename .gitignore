@@ -1,3 +1,6 @@
 *.pyc
 .idea
 kurso.db
+media/diapositivas/*
+media/logoclientes/*
+media/homepostfotos/*

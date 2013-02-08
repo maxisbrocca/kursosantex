@@ -11,6 +11,12 @@ ADMINS = (
 # ('Your Name', 'your_email@example.com'),
 )
 
+ACCOUNT_ACTIVATION_DAYS = 7
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1023
+EMAIL_HOST_USER = 'username'
+EMAIL_HOST_PASSWORD = 'password'
+
 MANAGERS = ADMINS
 
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
@@ -120,6 +126,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -127,6 +134,7 @@ INSTALLED_APPS = (
     'kursoapp',
     'dajaxice',
     'dajax',
+    'registration',
     )
 
 # A sample logging configuration. The only tangible logging

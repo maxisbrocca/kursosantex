@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
+    url(r'^accounts/', include('registration.backends.default.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()
